@@ -14,7 +14,7 @@ class Caption(object):
     """
     Represents a caption.
     """
-    def __init__(self, start='00:00:00.000', end='00:00:00.000', text=None):
+    def __init__(self, start='00:00:00.000', end='00:00:00.000', text=None, identifier=None):
         self.start = start
         self.end = end
         self.identifier = None
@@ -107,6 +107,14 @@ class Caption(object):
             raise AttributeError('String value expected but received {}.'.format(type(value)))
 
         self._lines = value.splitlines()
+
+    @property
+    def identifier(self)
+        return self.identifier
+
+    @identifier.setter
+    def identifier(self, value)
+        self.identifier = value
 
 
 class GenericBlock(object):
